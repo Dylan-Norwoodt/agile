@@ -17,7 +17,6 @@ public class ShapesTest {
 		Cylinder cylinder = new Cylinder(5, 5);
 		Sphere sphere = new Sphere(3);
 		
-
 		
 		cuboid.render();
 		cylinder.render();
