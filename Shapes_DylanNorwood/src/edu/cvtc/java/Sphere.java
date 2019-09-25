@@ -5,23 +5,21 @@ package edu.cvtc.java;
 
 import java.lang.Math;
 
-import javax.swing.JOptionPane;
+
 /**
  * @author dylan
  *
  */
-public class Sphere extends Shape {
+public class Sphere extends Shape implements Renderer{
 
 	// Attributes
 	private float radius = 0;
 	
 	// Constructors 
-	public Sphere() {
-		// TODO Auto-generated constructor stub
-	}
+	
 
-	public Sphere(float radius) {
-		super();
+	public Sphere(Dialog messageBox, float radius) {
+		super(messageBox);
 		setRadius(radius);
 	}
 	
@@ -67,11 +65,13 @@ public class Sphere extends Shape {
 	 */
 	@Override
 	public void render() {
-		JOptionPane.showMessageDialog(null, "These are the dimensions of the Sphere...\n "
+		this.getMessageBox().show( "These are the dimensions of the Sphere...\n"
 		+ 	" Radius: " + this.getRadius() 
-		+ 	"\n Surface Area: " + this.surfaceArea()
-		+ 	"\n Volume: " + this.volume());
+		+ 	"\nSurface Area: " + this.surfaceArea()
+		+ 	"\nVolume: " + this.volume(), null);
 
 	}
+
+	
 
 }

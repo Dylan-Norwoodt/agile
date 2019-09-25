@@ -13,11 +13,29 @@ package edu.cvtc.java;
  */
 public abstract class Shape {
 	
+	// Attributes
+	private Dialog messageBox;
+	
+	// Constructors
+
+	
+	Shape(Dialog messageBox) {
+		setMessageBox(messageBox);
+	}
+	
+	// Methods
+	protected Dialog getMessageBox() {
+		return this.messageBox;
+	}
+	
+	private void setMessageBox(Dialog messageBox) {
+		this.messageBox = messageBox;
+	}
+	
 	public abstract float surfaceArea();
 	
 	public abstract float volume();
 	
-	public abstract void render();
 	
 
 }

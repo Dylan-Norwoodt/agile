@@ -13,9 +13,9 @@ public class ShapesTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Cuboid cuboid = new Cuboid(10, 10, 10);
-		Cylinder cylinder = new Cylinder(5, 5);
-		Sphere sphere = new Sphere(3);
+		Renderer cuboid = new Cuboid(new MessageBox(), 10, 10, 10);
+		Renderer cylinder = new Cylinder(new MessageBox(), 5, 5);
+		Renderer sphere = new Sphere(new MessageBox(), 3);
 		
 		
 		cuboid.render();

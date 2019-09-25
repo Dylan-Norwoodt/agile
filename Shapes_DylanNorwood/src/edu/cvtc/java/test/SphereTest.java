@@ -7,10 +7,12 @@ import org.junit.Test;
 import edu.cvtc.java.Sphere;
 
 public class SphereTest {
+	
+	MessageBoxSub messageBox = new MessageBoxSub();
 
-	Sphere sphere1 = new Sphere(1);
-	Sphere sphere2 = new Sphere(2);
-	Sphere sphere3 = new Sphere(3);
+	Sphere sphere1 = new Sphere(messageBox, 1);
+	Sphere sphere2 = new Sphere(messageBox, 2);
+	Sphere sphere3 = new Sphere(messageBox, 3);
 
 	
 	@Test
@@ -33,12 +35,20 @@ public class SphereTest {
 		assertEquals(113.1, sphere3.surfaceArea(), 0.01);
 	}
 	
-	@Test public void testVolume() {
+	@Test 
+	public void testVolume() {
 		
 		assertEquals(4.19, sphere1.volume(), 0.01);
 		assertEquals(33.51, sphere2.volume(), 0.01);
 		assertEquals(113.1, sphere3.volume(), 0.01);
 	}
 	
-
+	@Test 
+	public void testRender() {
+		sphere1.render();
+		sphere2.render();
+		sphere3.render();
+	}
+	
+	
 }

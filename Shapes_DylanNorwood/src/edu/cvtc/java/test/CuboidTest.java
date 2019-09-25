@@ -2,15 +2,20 @@ package edu.cvtc.java.test;
 
 import static org.junit.Assert.*;
 
+
+
 import org.junit.Test;
 
 import edu.cvtc.java.Cuboid;
 
+
 public class CuboidTest {
 	
-	Cuboid cube1 = new Cuboid(2, 2, 2);
-	Cuboid cube2 = new Cuboid(1, 1, 1);
-	Cuboid cube3 = new Cuboid(5, 5, 5);
+	MessageBoxSub messageBox = new MessageBoxSub();
+	
+	Cuboid cube1 = new Cuboid(messageBox, 2, 2, 2);
+	Cuboid cube2 = new Cuboid(messageBox, 1, 1, 1);
+	Cuboid cube3 = new Cuboid(messageBox, 5, 5, 5);
 	
 
 	@Test
@@ -51,6 +56,13 @@ public class CuboidTest {
 		assertEquals(8, cube1.volume(), 0.01);
 		assertEquals(1, cube2.volume(), 0.01);
 		assertEquals(125, cube3.volume(), 0.01);
+	}
+	
+	@Test
+	public void testRender() {
+		cube1.render();
+		cube2.render();
+		cube3.render();
 	}
 	
 }

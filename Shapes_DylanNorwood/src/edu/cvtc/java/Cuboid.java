@@ -3,12 +3,12 @@
  */
 package edu.cvtc.java;
 
-import javax.swing.JOptionPane;
+
 /**
  * @author dylan
  *
  */
-public class Cuboid extends Shape {
+public class Cuboid extends Shape implements Renderer{
 
 	// Fields
 	private float width = 0;
@@ -16,12 +16,11 @@ public class Cuboid extends Shape {
 	private float depth = 0;
 	
 	// Constructors
-	public Cuboid() {
-		// TODO Auto-generated constructor stub
-	}
 	
-	public Cuboid(float width, float height, float depth) {
-		super();
+
+	
+	public Cuboid(Dialog messageBox, float width, float height, float depth) {
+		super(messageBox);
 		setWidth(width);
 		setHeight(height);
 		setDepth(depth);
@@ -116,12 +115,15 @@ public class Cuboid extends Shape {
 	 */
 	@Override
 	public void render() {
-		JOptionPane.showMessageDialog(null, "These are the dimensions of the Cuboid...\n Depth: " + this.getDepth() 
+		this.getMessageBox().show( "These are the dimensions of the Cuboid...\n Depth: " + this.getDepth() 
 										+	"\n Height: " + this.getHeight()
 										+	"\n Width: " + this.getWidth() 
 										+ 	"\n Surface Area: " + this.surfaceArea()
-										+ 	"\n Volume: " + this.volume());
+										+ 	"\n Volume: " + this.volume(), null);
 
 	}
+	
+	
+	
 
 }

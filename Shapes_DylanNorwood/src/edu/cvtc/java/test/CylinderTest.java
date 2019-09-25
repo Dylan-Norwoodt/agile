@@ -4,14 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 import edu.cvtc.java.Cylinder;
 
-public class CylinderTest {
 
-	Cylinder cylinder1 = new Cylinder(2, 2);
-	Cylinder cylinder2 = new Cylinder(1, 1);
-	Cylinder cylinder3 = new Cylinder(5, 5);
+
+
+public class CylinderTest {
+	
+	MessageBoxSub messageBox = new MessageBoxSub();
+
+	Cylinder cylinder1 = new Cylinder(messageBox, 2, 2);
+	Cylinder cylinder2 = new Cylinder(messageBox, 1, 1);
+	Cylinder cylinder3 = new Cylinder(messageBox, 5, 5);
 	
 
 	@Test
@@ -47,6 +51,13 @@ public class CylinderTest {
 		assertEquals(25.13, cylinder1.volume(), 0.01);
 		assertEquals(3.14, cylinder2.volume(), 0.01);
 		assertEquals(392.7, cylinder3.volume(), 0.01);
+	}
+	
+	@Test
+	public void testRender() {
+		cylinder1.render();
+		cylinder2.render();
+		cylinder3.render();
 	}
 
 }

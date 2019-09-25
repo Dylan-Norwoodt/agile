@@ -3,25 +3,25 @@
  */
 package edu.cvtc.java;
 
-import javax.swing.JOptionPane;
+
 
 /**
  * @author dylan
  *
  */
-public class Cylinder extends Shape {
+public class Cylinder extends Shape implements Renderer{
 
 	// Attributes
 	private float radius = 0;
 	private float height = 0;
 	
 	// Constructors
-	public Cylinder() {
-		// TODO Auto-generated constructor stub
-	}
+	
+	
+	
 
-	public Cylinder(float radius, float height) {
-		super();
+	public Cylinder(Dialog messageBox, float radius, float height) {
+		super(messageBox);
 		setRadius(radius);
 		setHeight(height);
 	}
@@ -93,11 +93,12 @@ public class Cylinder extends Shape {
 	 */
 	@Override
 	public void render() {
-		JOptionPane.showMessageDialog(null, "These are the dimensions of the Cylinder...\n "
-		+ 	"Radius: " + this.getRadius() 
-		+	"\n Height: " + this.getHeight() 
-		+ 	"\n Surface Area: " + this.surfaceArea()
-		+ 	"\n Volume: " + this.volume());
+	this.getMessageBox().show("These are the dimensions of the Cylinder"
+						+ "\nThe Radius of the Cylinder is: " +
+						this.getRadius() + "\nThe height of the Cylinder is " +
+						this.getHeight() + "\nThe Surface Area of the Cylinder is " +
+						this.surfaceArea() + "\nThe Volume of the Cylinder is " +
+						this.volume(), "");
 
 	}
 
