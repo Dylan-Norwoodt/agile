@@ -17,9 +17,11 @@ public abstract class Shape {
 	private Dialog messageBox;
 	
 	// Constructors
-
+	public Shape() {
+		
+	}
 	
-	Shape(Dialog messageBox) {
+	public Shape(Dialog messageBox) {
 		setMessageBox(messageBox);
 	}
 	

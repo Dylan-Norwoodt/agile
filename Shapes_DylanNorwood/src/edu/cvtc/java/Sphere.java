@@ -16,7 +16,9 @@ public class Sphere extends Shape implements Renderer{
 	private float radius = 0;
 	
 	// Constructors 
-	
+	public Sphere() {
+		
+	}
 
 	public Sphere(Dialog messageBox, float radius) {
 		super(messageBox);

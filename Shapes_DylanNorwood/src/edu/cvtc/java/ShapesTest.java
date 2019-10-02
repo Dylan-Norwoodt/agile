@@ -13,15 +13,18 @@ public class ShapesTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Renderer cuboid = new Cuboid(new MessageBox(), 10, 10, 10);
-		Renderer cylinder = new Cylinder(new MessageBox(), 5, 5);
-		Renderer sphere = new Sphere(new MessageBox(), 3);
+		Dialog messageBox = new MessageBox();
+		ShapeFactory shapeFactory = new ShapeFactory(messageBox);
 		
+		Cylinder cylinder = (Cylinder) shapeFactory.make(ShapeType.Cylinder);
 		
-		cuboid.render();
+		Cuboid cuboid = (Cuboid) shapeFactory.make(ShapeType.Cuboid);
+		
+		Sphere sphere = (Sphere) shapeFactory.make(ShapeType.Sphere);
+		
 		cylinder.render();
+		cuboid.render();
 		sphere.render();
-
 	}
 
 }

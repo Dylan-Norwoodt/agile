@@ -17,7 +17,9 @@ public class Cylinder extends Shape implements Renderer{
 	
 	// Constructors
 	
-	
+	public Cylinder() {
+		
+	}
 	
 
 	public Cylinder(Dialog messageBox, float radius, float height) {

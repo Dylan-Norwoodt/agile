@@ -17,7 +17,9 @@ public class Cuboid extends Shape implements Renderer{
 	
 	// Constructors
 	
-
+	public Cuboid() {
+		
+	}
 	
 	public Cuboid(Dialog messageBox, float width, float height, float depth) {
 		super(messageBox);

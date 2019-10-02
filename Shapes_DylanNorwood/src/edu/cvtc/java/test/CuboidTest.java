@@ -2,8 +2,6 @@ package edu.cvtc.java.test;
 
 import static org.junit.Assert.*;
 
-
-
 import org.junit.Test;
 
 import edu.cvtc.java.Cuboid;
